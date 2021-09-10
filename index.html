@@ -1,0 +1,876 @@
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/7.0.5/swiper-bundle.css" />
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/2.0.1/animate.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style type="text/css">
+   @font-face {
+   font-family: 'HKGroteskBold';
+   src:  url('./fonts/HKGrotesk-Bold.otf');
+   }
+   @font-face {
+   font-family: 'HKGroteskMedium';
+   src:  url('./fonts/HKGrotesk-Medium.otf');
+   }
+   @font-face {
+   font-family: 'HKGroteskRegular';
+   src:  url('./fonts/HKGrotesk-Regular.otf');
+   }
+   @font-face {
+   font-family: 'HKGroteskLight';
+   src:  url('./fonts/HKGrotesk-Light.otf');
+   }
+   @font-face {
+   font-family: 'HKGroteskSemiItalic';
+   src:  url('./fonts/HKGrotesk-SemiBoldItalic.otf');
+   }
+   body,.resp-body #root {
+   font-size: 12px;
+   line-height: 26px;
+   }
+   .header-section p{
+   font-family: 'HKGroteskLight';
+   margin-top: 80px;
+   margin-bottom: 30px;
+   font-size: 18px;
+   line-height: 28px;
+   color:rgba(255, 255, 255, 0.7);
+   }
+   h1, h2, h3, h4, h5, h6,
+   .h1, .h2, .h3, .h4, .h5, .h6 {
+   font-family: 'HKGroteskBold';
+   }
+   h1, .h1 {
+   font-size: 70px;
+   line-height: 90px;
+   margin-bottom: 30px;
+   font-weight: 700;
+   }
+   h2,.h2 {
+   margin-bottom: 20px;
+   font-size: 40px;
+   line-height: 53px;
+   font-weight: 800;
+   }
+   h3, .h3 {
+   font-size: 45px;
+   line-height: 55px;
+   margin-bottom: 20px;
+   }
+   h4, .h4 {
+   font-size: 50px;
+   line-height: 55px;
+   margin-bottom: 45px;
+   }
+   h5,.h5 {
+   }
+   h6,.h6 {
+   font-family: 'HKGroteskRegular';
+   color: #939C9F;
+   font-size: 12px;
+   line-height: 19px;
+   text-transform: uppercase;
+   }
+   p > a {
+   color: inherit;
+   }
+   .text-white h1,.text-white h2,.text-white h3,.text-white h4,.text-white h5,.text-white h6,.text-white p {
+   color: #fff;
+   }
+   .bg-dark {
+   background-color: #000!important;
+   }
+   [data-background] {
+   background-size: cover;
+   background-position: center center;
+   background-repeat: no-repeat;
+   }
+   section {
+   padding: 130px 0 100px;
+   position: relative;
+   z-index: 1;
+   }
+   .page-wrapper {
+   background: #fff;
+   border-top:0;
+   }
+   .wow {
+   visibility: hidden;
+   }
+   .img-thumbnail {
+   padding: 10px;
+   background-color: #D7D0B4;
+   border: 1px solid #D7D0B4;
+   border-radius: 30px;
+   }
+   .note-editable .wow {
+   visibility: visible;
+   }
+   .transparent-nav {
+   background: #03062F;
+   left: 0;
+   padding: 15px;
+   position: absolute;
+   right: 0;
+   top: 0;
+   width: 100%;
+   z-index: 99;
+   }
+   .navbar-brand {
+   margin-right: 50px;
+   }
+   .navbar .navbar-nav .nav-link {
+   color: #fff;
+   }
+   .navbar form {
+   margin-bottom: 0;
+   }
+   .btn-outline-primary{
+   padding: 9px 20px;
+   background: #030F3F;
+   color: #ffffff;
+   border: 1px solid #2B83EA;
+   border-radius: 2px;
+   font-size: 15px;
+   line-height: 24px;
+   }
+   .btn-light {
+   padding: 9px 20px;
+   border-radius: 4px;
+   font-size: 15px;
+   line-height: 24px;
+   color: #528FF0;
+   font-weight: 600;
+   }
+   li.nav-item a {
+   font-size: 15px;
+   line-height: 23px;
+   }
+   .header-section{
+   position: relative;
+   background: url(./img/Vector\ 1.png);
+   background-position: center bottom;
+   background-repeat: no-repeat;
+   background-size: cover;
+   padding-bottom: 200px;
+   }
+   .float-img {
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   }
+   hr {
+   position: absolute;
+   margin-top: 1rem;
+   margin-bottom: 1rem;
+   border: 0;
+   border-top: 5px solid #58C19C;
+   width: 25px;
+   height: 4px;
+   }
+   a.btn {
+   font-family: 'HKGroteskRegular';
+   padding: 12px 20px;
+   font-size: 15px;
+   line-height: 24px;
+   border-radius: 2px;
+   margin-bottom: 30px;
+   }
+   .swiper {
+   width: 100%;
+   height: 100%;
+   }
+   .swiper-slide {
+   text-align: center;
+   font-size: 18px;
+   background: #fff;
+   /* Center slide text vertically */
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: -webkit-flex;
+   display: flex;
+   -webkit-box-pack: center;
+   -ms-flex-pack: center;
+   -webkit-justify-content: center;
+   justify-content: center;
+   -webkit-box-align: center;
+   -ms-flex-align: center;
+   -webkit-align-items: center;
+   align-items: center;
+   }
+   .swiper-slide img {
+   display: block;
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   }
+   body {
+   background: #000;
+   color: #000;
+   }
+   .swiper {
+   width: 100%;
+   height: 300px;
+   margin-left: auto;
+   margin-right: auto;
+   }
+   .swiper-slide {
+   background-size: cover;
+   background-position: center;
+   }
+   .mySwiper2 {
+   height: 80%;
+   width: 100%;
+   }
+   .mySwiper {
+   height: 20%;
+   box-sizing: border-box;
+   padding: 10px 0;
+   }
+   .mySwiper .swiper-slide {
+   width: 25%;
+   height: 50%;
+   }
+   .mySwiper .swiper-slide-thumb-active {
+   opacity: 1;
+   border: 1px solid #0000003d;
+   border-radius: 4px;
+   }
+   .swiper-slide img {
+   padding: 2px;
+   display: block;
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   }
+   .side-content p{
+   font-size: 20px;
+   line-height: 30px;
+   color: #4F5659;
+   }
+   input::-webkit-outer-spin-button,
+   input::-webkit-inner-spin-button {
+   -webkit-appearance: none;
+   margin: 0;
+   }
+   input[type=number] {
+   -moz-appearance: textfield;
+   }
+   input#qty {
+   border: none;
+   text-align: center;
+   font-size: 16px;
+   line-height: 24px;
+   }
+   .qtybtns {
+   padding: 14px;
+   border: none;
+   background: #EDF1F2;
+   border-radius: 4px;
+   font-size: 15px;
+   color: #8CA4AB;
+   }
+   button:focus{
+   outline: none;
+   }
+   [type="radio"]:checked,
+   [type="radio"]:not(:checked) {
+   position: absolute;
+   left: -9999px;
+   }
+   [type="radio"]:checked + label,
+   [type="radio"]:not(:checked) + label
+   {
+   position: relative;
+   padding-left: 35px;
+   cursor: pointer;
+   line-height: 20px;
+   display: inline-block;
+   color: #000000;
+   }
+   [type="radio"]:not(:checked) + label:before {
+   content: '';
+   position: absolute;
+   left: 0;
+   top: 0;
+   width: 20px;
+   height: 20px;
+   border: 1px solid #D6DFE1;
+   border-radius: 100%;
+   background: #fff;
+   }
+   [type="radio"]:checked + label:before
+   {
+   content: '';
+   position: absolute;
+   left: 0;
+   top: 0;
+   width: 20px;
+   height: 20px;
+   border: 1px solid #00BA74;
+   border-radius: 100%;
+   background: #fff;
+   }
+   [type="radio"]:checked + label:after,
+   [type="radio"]:not(:checked) + label:after {
+   content: '';
+   width: 12px;
+   height: 12px;
+   background: #00BA74;
+   position: absolute;
+   top: 4px;
+   left: 4px;
+   border-radius: 100%;
+   -webkit-transition: all 0.2s ease;
+   transition: all 0.2s ease;
+   }
+   [type="radio"]:not(:checked) + label:after {
+   opacity: 0;
+   -webkit-transform: scale(0);
+   transform: scale(0);
+   }
+   [type="radio"]:checked + label:after {
+   opacity: 1;
+   -webkit-transform: scale(1);
+   transform: scale(1);
+   }
+   .offers label{
+   font-family: 'HKGroteskRegular';
+   font-weight: 600;
+   font-size: 16px;
+   line-height: 22px;
+   }
+   label.info {
+   margin-left: 35px;
+   font-size: 13px;
+   line-height: 20px;
+   font-weight: 400;
+   color: #545C5F;
+   }
+   .bold{
+   font-family: 'HKGroteskBold'; 
+   font-weight: 700;
+   color: #000000;
+   }
+   .bg-bold{
+   font-family: 'HKGroteskSemiItalic'; 
+   font-weight: 700;
+   color: #000000;
+   background: #B1FBE3;
+   padding: 1px 10px;
+   border-radius: 10px;
+   font-size: 12px;
+   line-height: 16px;
+   }
+   .light-clr{
+   color: #3bc796;
+   font-weight: 500;
+   }
+   .btn-secondary {
+   font-family: 'HKGroteskMedium';
+   font-size: 18px;
+   line-height: 24px;
+   padding: 24px;
+   background: #00BA74;
+   border: none;
+   }
+   .product-section{
+   position: relative;
+   }
+   .swiper-button-prev, .swiper-rtl .swiper-button-next {
+   left: 0px;
+   right: auto;
+   background: #F4F6F6;
+   height: 50px;
+   width: 50px;
+   border-radius: 50%;
+   }
+   .swiper-button-next {
+   background: #F4F6F6;
+   right: 0;
+   left: auto;
+   height: 50px;
+   width: 50px;
+   border-radius: 50%;
+   }
+   .color-box {
+   border: 1px solid #D8E0E2;
+   height: 100%;
+   text-align: center;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding: 7px 12px;
+   border-radius: 6px;
+   cursor: pointer;
+   margin-top: 5px;
+   }
+   .color-box p{
+   font-size: 13px;
+   line-height: 16px;
+   margin-bottom: 0;
+   color: #545C5F;
+   }
+   .orange{
+   background: #DE742D;
+   color: #ffffff;
+   }
+   .purple{
+   background: #A07EDC;
+   color: #ffffff;
+   }
+   .active-class {
+   border: 1px solid #000000;
+   }
+   .active-class p{
+   color: #000000;
+   font-weight: 600;
+   }
+   .item-color p {
+   font-size: 10px;
+   line-height: 16px;
+   }
+   .swiper-button-prev:after, .swiper-rtl .swiper-button-next:after, .swiper-button-next:after{
+   font-size: 18px;
+   color: #B1B7B9;
+   }
+   .explanation p{
+   font-size: 16px;
+   line-height: 24px;
+   margin-bottom: 5px;
+   margin-left: 10px;
+   }
+   .light-grey{
+   font-size: 14px;
+   line-height: 24px;
+   color: #545C5F;
+   }
+   .bold-grey{
+   font-weight: 600;
+   text-decoration: underline;
+   }
+   i.fa.fa-arrow-right {
+   font-size: 12px;
+   font-weight: 200;
+   margin-left: 5px;
+   }
+   .star-icon {
+   color: #ccc;
+   font-size: 24px;
+   line-height: 35px;
+   vertical-align: middle;
+   }
+   .star-icon.filled {
+   color: #FFD200;
+   }
+   .item-color {
+   position: absolute;
+   left: 0;
+   right: 0;
+   margin: 0 auto;
+   width: 100%;
+   top: 0;
+   border-radius: 6px 6px 0 0;
+   }
+   .reviews-text {
+   color: #4a4a4a;
+   font-size: 14px;
+   font-weight: normal;
+   margin-left: 5px;
+   vertical-align: middle;
+   }
+   @media(min-width: 576px) {
+   }
+   @media(min-width: 768px) {
+   }
+   @media(min-width: 991px) and (max-width: 1240px) {
+   .float-img {
+   bottom: -28px;
+   }
+   }
+   @media(min-width: 1241px) and (max-width: 1800px) {
+   .float-img {
+   bottom: -21px;
+   }
+   }
+   @media(min-width: 992px) {
+   .navbar .navbar-nav .nav-link {
+   padding: 0 20px;
+   }
+   }
+   @media(max-width: 991px) {
+   .float-img {
+   bottom: -42px;
+   }	
+   }
+   @media(max-width: 767px) {
+   section {
+   padding: 70px 0 50px;
+   }
+   h2, .h2 {
+   margin-bottom: 15px;
+   font-size: 30px;
+   line-height: 43px;
+   }
+   .header-section p {
+   margin-top: 70px;
+   margin-bottom: 30px;
+   font-size: 16px;
+   line-height: 26px;
+   }
+   a.btn {
+   font-family: 'HKGroteskRegular';
+   padding: 8px 15px;
+   font-size: 13px;
+   line-height: 22px;
+   }
+   .float-img{
+   bottom: -36px;
+   }
+   .heading {
+   text-align: center;
+   }
+   .quantity {
+   text-align: center;
+   }
+   .swiper-button-next{
+   right: 10px;
+   }
+   .swiper-button-prev{
+   left: 10px;
+   }
+   .color-box-extra{
+   padding: 20px 10px 10px;
+   }
+   }
+   @media(max-width: 575px) {
+   }
+</style>
+<div class="page-wrapper">
+   <nav class="navbar navbar-expand-lg transparent-nav navbar-dark">
+      <div class="container">
+         <a class="navbar-brand" href="#"><img class="img-fluid" src="./img/logo.png"></a>
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"></span>
+         </button>
+         <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+               <li class="nav-item">
+                  <a class="nav-link" href="#">Products</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="#">Solutions</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="#">Pricing</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="#">Resources</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="#">Company</a>
+               </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+               <li class="nav-item">
+                  <a class="nav-link" href="#"><img class="img-fluid" src="./img/united-states 1.png"></a>
+               </li>
+            </ul>
+            <form>
+               <button class="btn btn-outline-primary mr-3" type="button">Log In</button>
+               <button class="btn btn-light" type="button">Sign Up  <i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+            </form>
+         </div>
+      </div>
+   </nav>
+   <section class="header-section">
+      <div class="container float-img">
+         <img class="img-fluid" src="./img/Group 5.png">
+      </div>
+      <div class="container">
+         <div class="row align-items-center">
+            <div class="col-md-6">
+               <div class="title">
+                  <h2 class="text-white">Lorem ipsum dolor sit amet consectetur </h2>
+                  <hr>
+               </div>
+               <div class="sub-para">
+                  <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+               </div>
+               <div class="signup-btn">
+                  <a class="btn btn-primary" href="#">Sign Up Now</a>
+               </div>
+            </div>
+            <div class="col-md-6 text-right">
+               <div class="img-wrapper">
+                  <img class="img-fluid" src="./img/Group.png">
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+   <section class="product-section">
+      <div class="container">
+         <div class="row align-items-center">
+            <div class="col-md-6">
+               <div
+                  style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"
+                  class="swiper mySwiper2"
+                  >
+                  <div class="swiper-wrapper">
+                     <div class="swiper-slide">
+                        <img src="./img/slider/image 01.png" />
+                     </div>
+                     <div class="swiper-slide">
+                        <img src="./img/slider/image 02.png" />
+                     </div>
+                     <div class="swiper-slide">
+                        <img src="./img/slider/image 03.png" />
+                     </div>
+                     <div class="swiper-slide">
+                        <img src="./img/slider/image 04.png" />
+                     </div>
+                     <div class="swiper-slide">
+                        <img src="./img/slider/image 05.png" />
+                     </div>
+                     <div class="swiper-slide">
+                        <img src="./img/slider/image 06.png" />
+                     </div>
+                     <div class="swiper-slide">
+                        <img src="./img/slider/image 07.png" />
+                     </div>
+                     <div class="swiper-slide">
+                        <img src="./img/slider/image 08.png" />
+                     </div>
+                  </div>
+               </div>
+               <div class="swiper-button-next"></div>
+               <div class="swiper-button-prev"></div>
+               <div thumbsSlider="" class="swiper mySwiper">
+                  <div class="swiper-wrapper">
+                     <div class="swiper-slide">
+                        <img src="./img/slider/image 01.png" />
+                     </div>
+                     <div class="swiper-slide">
+                        <img src="./img/slider/image 02.png" />
+                     </div>
+                     <div class="swiper-slide">
+                        <img src="./img/slider/image 03.png" />
+                     </div>
+                     <div class="swiper-slide">
+                        <img src="./img/slider/image 04.png" />
+                     </div>
+                     <div class="swiper-slide">
+                        <img src="./img/slider/image 05.png" />
+                     </div>
+                     <div class="swiper-slide">
+                        <img src="./img/slider/image 06.png" />
+                     </div>
+                     <div class="swiper-slide">
+                        <img src="./img/slider/image 07.png" />
+                     </div>
+                     <div class="swiper-slide">
+                        <img src="./img/slider/image 08.png" />
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="col-md-6">
+               <div class="side-content">
+                  <h2>Pharetra Convallis</h2>
+                  <p>Euismod in pellentesque massa placerat duis ultricies lacus sed. Sit amet consectetur adipiscing elit pellentesque habitant morbi. Commodo nulla facilisi nullam vehicula!</p>
+               </div>
+               <div class="rating mb-4">
+                  <span class="star-icon filled">★</span>
+                  <span class="star-icon filled">★</span>
+                  <span class="star-icon filled">★</span>
+                  <span class="star-icon filled">★</span>
+                  <span class="star-icon">★</span>
+                  <span class="reviews-text">
+                  23 reviews
+                  </span>
+               </div>
+               <div class="heading">
+                  <h6>COLOR</h6>
+               </div>
+               <div class="color-select d-md-flex">
+                  <div class="col-md-3 p-0 m-1 mb-4">
+                     <div class="color-box color-box-extra active-class d-flex flex-column">
+                        <div class="item-color orange">
+                           <p class="text-white">NEW COLOR!</p>
+                        </div>
+                        <p>Nordvalla dark grey</p>
+                     </div>
+                  </div>
+                  <div class="col-md-3 p-0 m-1 mb-4">
+                     <div class="color-box color-box-extra d-flex flex-column">
+                        <div class="item-color purple">
+                           <p class="text-white">LIMITED RELEASE</p>
+                        </div>
+                        <p>Beige</p>
+                     </div>
+                  </div>
+                  <div class="col-md-3 p-0 m-1 mb-4">
+                     <div class="color-box">
+                        <p>Grey</p>
+                     </div>
+                  </div>
+                  <div class="col-md-3 p-0 m-1 mb-4">
+                     <div class="color-box">
+                        <p>Skiftebo yellow</p>
+                     </div>
+                  </div>
+               </div>
+               <div class="color-select d-flex mb-3">
+                  <div class="col-md-3 p-0 m-1 mb-4">
+                     <div class="color-box">
+                        <p>Kelinge beige</p>
+                     </div>
+                  </div>
+                  <div class="col-md-3 p-0 m-1 mb-4">
+                     <div class="color-box">
+                        <p>Vibberbo black/beige</p>
+                     </div>
+                  </div>
+               </div>
+               <div class="heading">
+                  <h6>QUANTITY</h6>
+               </div>
+               <div class="quantity mb-5">
+                  <form action="">
+                     <p class="qty">
+                        <button class="qtybtns qtyminus" aria-hidden="true">&minus;</button>
+                        <input type="number" name="qty" id="qty" min="1" max="10" step="1" value="1">
+                        <button class="qtybtns qtyplus" aria-hidden="true">&plus;</button>
+                     </p>
+                  </form>
+               </div>
+               <div class="offers">
+                  <form action="#">
+                     <p>
+                        <input type="radio" id="test1" name="radio-group" checked>
+                        <label for="test1">Buy once -  $39.99</label><br>
+                        <label class="info">or 4 interest-free installments of <span class="bold">$10.00</span> with <span class="bg-bold">TrevaPay</span></label>
+                     </p>
+                     <p>
+                        <input type="radio" id="test2" name="radio-group">
+                        <label for="test2">Subscribe  & <span class="light-clr"> save 12.5%</span> - $34.99</label>
+                        <label class="info">Never run out of product. Cancel anytime.</label>
+                     </p>
+                  </form>
+               </div>
+               <div class="add-btn align-items-center mb-4">
+                  <button class="btn btn-secondary w-100"><img class="img-fluid" style="margin-bottom: 5px;" src="./img/Vector.png">  Add to Bag</button>
+               </div>
+               <div class="explanation">
+                  <div class="d-flex mb-3 align-items-center vertical-align-middle">
+                     <img class="img-fluid d-inline-block" src="./img/Vector (1).png">
+                     <p class="d-inline-block">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                  </div>
+                  <div class="d-flex mb-3 align-items-center vertical-align-middle">
+                     <img class="img-fluid d-inline-block" src="./img/Vector (1).png">
+                     <p class="d-inline-block">Ac felis donec et odio pellentesque diam</p>
+                  </div>
+                  <div class="d-flex mb-3 align-items-center vertical-align-middle">
+                     <img class="img-fluid d-inline-block" src="./img/Vector (1).png">
+                     <p class="d-inline-block">Pharetra convallis posuere morbi leo urna molestie</p>
+                  </div>
+                  <div class="d-flex mb-3 align-items-center vertical-align-middle">
+                     <img class="img-fluid d-inline-block" src="./img/Vector (1).png">
+                     <p class="d-inline-block">Nunc aliquet bibendum enim facilisis gravida neque convallis</p>
+                  </div>
+                  <div class="d-flex mb-3 align-items-center vertical-align-middle">
+                     <img class="img-fluid d-inline-block" src="./img/Vector (1).png">
+                     <p class="d-inline-block">Praesent semper feugiat nibh sed pulvinar proin gravida</p>
+                  </div>
+                  <div class="d-flex mb-3 align-items-center vertical-align-middle mb-4">
+                     <img class="img-fluid d-inline-block" src="./img/Vector (1).png">
+                     <p class="d-inline-block">Volutpat lacus laoreet non curabitur gravida arcu ac</p>
+                  </div>
+                  <div class="d-flex mb-3 align-items-center vertical-align-middle">
+                     <img class="img-fluid d-inline-block" src="./img/Vector (2).png">
+                     <p class="d-inline-block light-grey">Free delivery and a risk-free <span class="bold-grey">quality guarantee!</span></p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/7.0.5/swiper-bundle.min.js"></script>
+<script>
+   var pageSection = jQuery('[data-background]');
+   pageSection.each(function(indx){
+   	if ($(this).attr("data-background")){
+   		$(this).css("background-image", "url(" + $(this).data("background") + ")");
+   	}
+   });
+   
+         var swiper = new Swiper(".mySwiper", {
+           loop: true,
+           spaceBetween: 10,
+           slidesPerView: 8,
+           freeMode: true,
+           watchSlidesProgress: true,
+         });
+         var swiper2 = new Swiper(".mySwiper2", {
+           loop: true,
+           spaceBetween: 10,
+           autoplay: true,
+           navigation: {
+             nextEl: ".swiper-button-next",
+             prevEl: ".swiper-button-prev",
+           },
+           thumbs: {
+             swiper: swiper,
+           },
+         });
+   
+         var input = document.querySelector('#qty');
+   var btnminus = document.querySelector('.qtyminus');
+   var btnplus = document.querySelector('.qtyplus');
+   
+   if (input !== undefined && btnminus !== undefined && btnplus !== undefined && input !== null && btnminus !== null && btnplus !== null) {
+   	
+   	var min = Number(input.getAttribute('min'));
+   	var max = Number(input.getAttribute('max'));
+   	var step = Number(input.getAttribute('step'));
+   
+   	function qtyminus(e) {
+   		var current = Number(input.value);
+   		var newval = (current - step);
+   		if(newval < min) {
+   			newval = min;
+   		} else if(newval > max) {
+   			newval = max;
+   		} 
+   		input.value = Number(newval);
+   		e.preventDefault();
+   	}
+   
+   	function qtyplus(e) {
+   		var current = Number(input.value);
+   		var newval = (current + step);
+   		if(newval > max) newval = max;
+   		input.value = Number(newval);
+   		e.preventDefault();
+   	}
+   		
+   	btnminus.addEventListener('click', qtyminus);
+   	btnplus.addEventListener('click', qtyplus);
+     
+   } 
+   
+   	$.getScript("https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js", function() {
+   	    wow = new WOW({
+   		    animateClass: 'animated',
+   		    offset: 100
+   		});
+   		wow.init();
+   	});	
+</script>
